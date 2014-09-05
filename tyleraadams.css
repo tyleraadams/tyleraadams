@@ -1,0 +1,55 @@
+body {
+	font-family: 'Raleway', sans-serif;
+
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#intro{
+	background-color:gold;
+	color:white;
+	text-align:center;
+	padding:20px 0;
+	font-weight:100;
+	font-size:2.75em;
+	
+}
+
+.bold{
+	font-weight:400;
+	font-size:1.1em;
+}
+
+
+.social_media{
+	width:30px;
+	height:30px;
+	display:inline-block;
+	margin-right:40px;
+}
+
+#twitter{
+	background:url('twitter.png') no-repeat center center;
+	background-size:contain;
+
+}
+
+#linked{
+	background:url('linked.png') no-repeat center center;
+	background-size:contain;
+}
+
+#git{
+	background:url('git.png') no-repeat center center;
+	background-size:contain;
+	width:36px;
+}
+
+.icons{
+	margin-left: 18px;
+}
+
+.smaller{
+	font-size:0.5em;
+}
