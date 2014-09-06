@@ -63,3 +63,49 @@ a {
 .smaller{
 	font-size:0.5em;
 }
+
+.carousel_background{
+	background:url('carousel-backdrop.jpg') no-repeat center center;
+	background-size:cover;
+	width:100%;
+	height:600px;
+	background-attachment:fixed;
+}
+
+.carousel_background:before{
+	content:"";
+	height:600px;
+	background:#000080;
+	width:100%;
+	position:absolute;
+	opacity:0.6;
+}
+
+.carousel{
+	padding:75px 0;
+}
+
+.pane{
+	border:5px solid white;
+	position:relative;
+	margin:0 auto;
+	width: 60%;
+	height: 450px;
+	border-radius:5px;
+	display:none;
+}
+
+#under_her_skin{
+	background:url('under_her_skin.png') no-repeat center center;
+	background-size:contain;	
+}
+
+#room_visit{
+	background:url('room_visit.png') no-repeat center center;
+	background-size:contain;	
+}
+
+.active{
+	display:block;
+}
+
