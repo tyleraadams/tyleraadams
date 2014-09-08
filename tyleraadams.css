@@ -4,6 +4,7 @@ body {
 	width:100%;
 	margin:0;
 	padding:0;
+	overflow:hidden;
 	
 }
 
@@ -28,8 +29,8 @@ a {
 
 
 .social_media{
-	width:30px;
-	height:30px;
+	width:25px;
+	height:25px;
 	display:inline-block;
 	margin-right:40px;
 }
@@ -52,11 +53,14 @@ a {
 #git{
 	background:url('git.png') no-repeat center center;
 	background-size:contain;
-	width:36px;
+	width:30px;
+	height:24px;
+	margin-right:0;
 }
 
 .icons{
-	margin-left: 18px;
+	width:184px;
+	margin:0 auto;
 }
 
 
@@ -68,36 +72,48 @@ a {
 	background:url('carousel-backdrop.jpg') no-repeat center center;
 	background-size:cover;
 	width:100%;
-	height:600px;
-	background-attachment:fixed;
+	height:100%;
+	/*background-attachment:fixed;*/
 }
 
 .carousel_background:before{
 	content:"";
-	height:600px;
+	height:100%;
 	background:#000080;
 	width:100%;
 	position:absolute;
 	opacity:0.6;
 }
 
-.carousel{
-	padding:75px 0;
+/*.carousel{
+	padding:75px 0 0 0;
+	height:500px;
+	border-radius:10px;
+}*/
+/*
+.slick-next {
+	right: 5px !important;
 }
 
+.slick-prev {
+	left: 5px !important;
+}*/
+
 .pane{
-	border:5px solid white;
+	/*border:5px solid white;*/
 	position:relative;
 	margin:0 auto;
-	width: 60%;
+	/*width: 30%!important;*/
 	height: 450px;
-	border-radius:5px;
+	border-radius:10px;
 	display:none;
 }
 
 #under_her_skin{
 	background:url('under_her_skin.png') no-repeat center center;
 	background-size:contain;	
+	/*border:5px solid white;*/
+	/*border-radius:5px;*/
 }
 
 #room_visit{
