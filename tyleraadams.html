@@ -1,35 +1,139 @@
+<!DOCTYPE html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 	<link href='tyleraadams.css' rel='stylesheet' type='text/css'>
+	<link href='grid.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="./tyleraadams.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 	<title>Tyler Adams, Web Developer</title>
 </head>
 <body>
 <div id="container">
-<div id="intro">
-	<p class="smaller">Hello, World!</p>
-	<p>My name is <span class="bold"> Tyler Adams </span> and I'm a web developer</p>
-	<div class="icons">
-		<a href="http://twitter.com/tyleraadams" target="_blank"><div id="twitter" class="social_media"></div></a>
-		<a href="http://linkedin.com/in/tyleraadams" target="_blank"><div id="linked" class="social_media"></div></a>
-		<a href="http://github.com/tyleraadams" target="_blank"><div id="git" class="social_media"></div></a>
-	</div>
-</div>
-
-
-<div class="carousel_background">
-	<div class="carousel">
-
-		<div class="pane active" id="under_her_skin">
-		</div>
-
-		<div class="pane" id="room_visit">
+	<div id="intro">
+		<p class="smaller">Hello, World!</p>
+		<p>My name is <span class="bold"> Tyler Adams </span> and I'm a web developer</p>
+		<div class="icons">
+			<a href="http://twitter.com/tyleraadams" target="_blank"><div id="twitter" class="social_media"></div></a>
+			<a href="http://linkedin.com/in/tyleraadams" target="_blank"><div id="linked" class="social_media"></div></a>
+			<a href="http://github.com/tyleraadams" target="_blank"><div id="git" class="social_media"></div></a>
 		</div>
 	</div>
-</div>
 
+	<div style="padding:20px 0; font-size:1.25em; background:black; text-align:center;">
+		Programmatic Rigor Meets Aesthetic Joy
+	</div>
+
+	<div class="carousel_background">
+
+		<div class="headerwrap">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <div class="container text-center">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <h1>InviBox</h1>
+          <h3>All in-one email client. Elegant and intuitive. </h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
+              <h5><span class="header-accent">New technologies</span></h5>
+              <p>Built on Meteor JS for real time updating of data.</p>
+              
+            </div>
+            <div class="col-lg-8">
+              <a href="http://invibox.com" target="_blank"><img class="img-responsive" src="invibox.png" alt=""></a>
+            </div>
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
+              <div class="clearfix"></div>
+              <h5 class="space-top">One-stop-shop</h5>
+              <p>Allows user to keep work, home, and other email together in one platform.</p>
+            </div>
+          </div>
+        </div><!-- end first slide -->
+
+        <div class="item">
+          <h1>Under Her Skin</h1>
+          <h3>A newsapp for WNYC's The Takeaway</h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
+              <h5>Timeline JS</h5>
+              <p>Audio diaries are rendered as a timeline.</p>
+              
+            </div>
+            <div class="col-lg-8">
+              <a href="http://www.livingwithbreastcancer.org" target="_blank"><img class="img-responsive" src="under_her_skin.png" alt="" style="max-height:425px"></a>
+            </div>
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
+              
+              <div class="clearfix"></div>
+              <h5 class="space-top">Responsive Design</h5>
+              <p>Built with media queries to maintain usability across all devices and sizes.</p>
+            </div>
+          </div>
+        </div><!-- end second slide -->
+
+        <div class="item">
+          <h1>Room Visit</h1>
+          <h3>Innovative French startup that visits rooms for users</h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
+              <h5>Flat Design</h5>
+              <p>Pleasant and intuitive UX with adherence to flatness.</p>
+              
+            </div>
+            <div class="col-lg-8">
+              <a href="http://www.roomvisit.us" target="_blank"><img class="img-responsive" src="room_visit.png" alt=""></a>
+            </div>
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
+              
+              <div class="clearfix"></div>
+              <h5 class="space-top">Automatic updating</h5>
+              <p>The business has access to a database of all request sent via a simple form</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <h1>Tattle</h1>
+          <h3>Who owns what?</h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
+              <h5>APIs</h5>
+              <p>Integrates Google Freebase and NYT Article search to allow a consumer to know frm whom they are buying.</p>
+              
+            </div>
+            <div class="col-lg-8">
+              <a href="http://whoownswhat.herokuapp.com" target="_blank"><img class="img-responsive" src="tattle.png" alt=""></a>
+            </div>
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
+              
+              <div class="clearfix"></div>
+              <h5 class="space-top">Rails + Angular JS</h5>
+              <p>Built on Angular with Rails as an API for database and API queries. Front-end heavy app creates for a happy user.</p>
+            </div>
+          </div>
+        </div><!-- end third slide -->
+      </div><!-- /carousel-inner -->
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div><!-- /carousel -->
+  </div><!-- /headerwrap -->
 </div>
 </body>
+
+
+
 
 

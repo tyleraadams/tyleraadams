@@ -1,24 +1,22 @@
 body {
-	font-family: 'Raleway', sans-serif;
-
+	font-family: 'Raleway', sans-serif !important;
+	color:white !important;
 	width:100%;
 	margin:0;
-	padding:0;
-	
+	padding:0;	
 }
 
-a {
-	text-decoration: none;
-}
+
+a { text-decoration: none }
+
+h2{ margin:0 }
 
 #intro{
 	background-color:gold;
-	color:white;
 	text-align:center;
 	padding:20px 0;
 	font-weight:100;
 	font-size:2.75em;
-	
 }
 
 .bold{
@@ -28,8 +26,8 @@ a {
 
 
 .social_media{
-	width:30px;
-	height:30px;
+	width:25px;
+	height:25px;
 	display:inline-block;
 	margin-right:40px;
 }
@@ -41,7 +39,6 @@ a {
 #twitter{
 	background:url('twitter.png') no-repeat center center;
 	background-size:contain;
-
 }
 
 #linked{
@@ -52,13 +49,19 @@ a {
 #git{
 	background:url('git.png') no-repeat center center;
 	background-size:contain;
-	width:36px;
+	width:30px;
+	height:24px;
+	margin-right:0;
 }
 
 .icons{
-	margin-left: 18px;
+	width:184px;
+	margin:0 auto;
 }
 
+.col-lg-2{
+	font-weight:100;
+}
 
 .smaller{
 	font-size:0.5em;
@@ -66,7 +69,7 @@ a {
 
 .carousel_background{
 	background:url('carousel-backdrop.jpg') no-repeat center center;
-	background-size:cover;
+	background-size: cover;
 	width:100%;
 	height:600px;
 	background-attachment:fixed;
@@ -79,33 +82,24 @@ a {
 	width:100%;
 	position:absolute;
 	opacity:0.6;
+
 }
 
-.carousel{
-	padding:75px 0;
+.carousel-inner{
+	/*margin-top:50px;*/
+			padding:20px;
+
 }
 
-.pane{
-	border:5px solid white;
-	position:relative;
-	margin:0 auto;
-	width: 60%;
-	height: 450px;
-	border-radius:5px;
-	display:none;
+.item h3{
+	font-weight:100;
 }
 
-#under_her_skin{
-	background:url('under_her_skin.png') no-repeat center center;
-	background-size:contain;	
+.item img{
+	border: 5px solid black;
+	border-radius:3px;
 }
 
-#room_visit{
-	background:url('room_visit.png') no-repeat center center;
-	background-size:contain;	
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+	margin-top:50px !important;
 }
-
-.active{
-	display:block;
-}
-
