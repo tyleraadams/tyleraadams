@@ -1,153 +1,110 @@
-<!DOCTYPE html>
-<head>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-	<link href='tyleraadams.css' rel='stylesheet' type='text/css'>
-	<link href='grid.css' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script>
-  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tyler Adams, Web Developer</title>
+    <meta name="description"
+            content="Web portfolio for Tyler Adams, Web Developer">
+    <meta name="author" content="Tyler Adams">
+    <meta name="keywords" content="web,design,html,css,development,JavaScript,new york">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  		ga('create', 'UA-54737851-1', 'auto');
-  		ga('send', 'pageview');
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	</script>
-	<title>Tyler Adams, Web Developer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400|Raleway:700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-	<meta name="description"
-      content="Web portfolio for Tyler Adams, Web Developer">
-	<meta name="author" content="Tyler Adams">
-	<meta name="keywords" content="web,design,html,css,development,JavaScript,new york">
-</head>
-<body>
-<div id="container">
-	<div id="intro">
-		<p class="smaller">Hello, World!</p>
-		<p>My name is <span class="bold"> Tyler Adams </span> and I'm a web developer</p>
-		<div class="icons">
-			<a href="http://twitter.com/tyleraadams" target="_blank"><div id="twitter" class="social_media"></div></a>
-			<a href="http://linkedin.com/in/tyleraadams" target="_blank"><div id="linked" class="social_media"></div></a>
-			<a href="http://github.com/tyleraadams" target="_blank"><div id="git" class="social_media"></div></a>
-		</div>
-	</div>
-
-	<div style="padding:20px 0; font-size:1.25em; background:black; text-align:center;">
-		Programmatic Rigor Meets Aesthetic Harmony
-	</div>
-
-	<div class="carousel_background">
-
-		<div class="headerwrap">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <div class="container text-center">
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <h1>InviBox</h1>
-          <h3>All-in-one email client. Elegant and intuitive. </h3>
-          <br>
-          <div class="row">
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
-              <h5><span class="header-accent">New technologies</span></h5>
-              <p>Built on Meteor JS for real time updating of data</p>
-              
-            </div>
-            <div class="col-lg-8">
-              <a href="http://invibox.com" target="_blank"><img class="img-responsive" src="invibox.png" alt=""></a>
-            </div>
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
-              <div class="clearfix"></div>
-              <h5 class="space-top">One-stop shop</h5>
-              <p>Allows user to keep work, home, and other email together in one platform</p>
-            </div>
-          </div>
-        </div><!-- end first slide -->
-
-        <div class="item">
-          <h1>Under Her Skin</h1>
-          <h3>A newsapp for WNYC's The Takeaway</h3>
-          <br>
-          <div class="row">
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
-              <h5>Timeline JS</h5>
-              <p>Audio diaries are rendered as a timeline</p>
-              
-            </div>
-            <div class="col-lg-8">
-              <a href="http://www.livingwithbreastcancer.org" target="_blank"><img class="img-responsive" src="under_her_skin.png" alt="" style="max-height:425px"></a>
-            </div>
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
-              
-              <div class="clearfix"></div>
-              <h5 class="space-top">Responsive Design</h5>
-              <p>Built with media queries to maintain usability across all devices and sizes</p>
-            </div>
-          </div>
-        </div><!-- end second slide -->
-
-        <div class="item">
-          <h1>Room Visit</h1>
-          <h3>Innovative French startup that verifies rooms for clients who can't visit before leasing</h3>
-          <br>
-          <div class="row">
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
-              <h5>Flat Design</h5>
-              <p>Pleasant and intuitive UI with adherence to flatness</p>
-              
-            </div>
-            <div class="col-lg-8">
-              <a href="http://www.roomvisit.us" target="_blank"><img class="img-responsive" src="room_visit.png" alt=""></a>
-            </div>
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
-              
-              <div class="clearfix"></div>
-              <h5 class="space-top">Automatic updating</h5>
-              <p>The business receives detailed notifications of all requests sent via a simple form</p>
-            </div>
-          </div>
+    <div class="intro-wrapper">
+    <header id="intro">
+        <h2 class="smaller">Hello, World!</h2>
+        <h1>My name is <span class="emphasize">Tyler A. Adams</span>, and I make stuff on the interwebs</h1>
+        <div class="icons-wrapper">
+            <a href="http://twitter.com/tyleraadams" target="_blank"><i class="fa fa-twitter social_media"></i></a>
+            <a href="http://linkedin.com/in/tyleraadams" target="_blank"><i class="fa fa-linkedin social_media"></i></a>
+            <a href="http://github.com/tyleraadams" target="_blank"><i class="fa fa-github-alt social_media"></i></a>
         </div>
+    </header>
+    <i class="fa fa-angle-double-down go-down"></i>
+    <div>
+    <section id="portfolio">
+      <ul>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">VeroDalla.com <span class="meta">/ art portfolio app</span><a href="http://verodalla.com" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I built this art portoflio for VeroDalla, renowned French sculptor based in New York. I used the Meteor framework to bootstrap development and to make the site a single-page app. The simple design and lack of page reloads leaves the beauty of the artist's work front and center.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">MeteorJS, MongoDB, Mobile Friendly, Responsive Design, jQuery</span><br>
+                <span class="field">Client:</span> <span class="content">Verodalla</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
 
-        <div class="item">
-          <h1>Tattle</h1>
-          <h3>A capstone project for Dev Bootcamp</h3>
-          <br>
-          <div class="row">
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md left pad-top">
-              <h5>APIs</h5>
-              <p>Integrates Google Freebase and NYT Article search to allow a consumer to know from whom they are buying</p>
-              
-            </div>
-            <div class="col-lg-8">
-              <a href="http://whoownswhat.herokuapp.com" target="_blank"><img class="img-responsive" src="tattle.png" alt=""></a>
-            </div>
-            <div class="col-lg-2 hidden-xs hidden-sm hidden-md right">
-              
-              <div class="clearfix"></div>
-              <h5 class="space-top">Rails + Angular JS</h5>
-              <p>Built on Angular with Rails as an API for database and API queries. Front-end heavy app makes for a happy user</p>
-            </div>
-          </div>
-        </div><!-- end third slide -->
-      </div><!-- /carousel-inner -->
-      </div>
+              <h1 class="emphasize" itemprop="title">Under Her Skin <span class="meta">/ news diary app</span><a href="http://livingwithbreastcancer.org" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I built the news app for WNYC's The Takeaway's award winning series on minorities living with breast cancer. I use TimelineJS to render the written and audio diaries of the women interviewed for this project.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">TimelineJS Mobile Friendly, Responsive Design, HTML5 audio</span><br>
+                <span class="field">Client:</span> <span class="content">WNYC's The Takeaway</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">ZoePearson.me<span class="meta"> / academic portfolio</span> <a href="http://www.zoepearson.me" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>Geographer Zoe Pearson, PhD wanted to upgrade her old WordPress site for the academic job search. I made a modern and clean UI using her writing and images she took while doing her reserach in Latin America. The user experience is fast, with no page reloads thanks to AJAX POST and GET requests. Elegantly stacking columns of content, the site is completely usable on mobile.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">MeteorJS, Mobile Friendly, Responsive Design</span><br>
+                <span class="field">Client:</span> <span class="content">Zoe Pearson, PhD</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">Silk & Souls<span class="meta"> / news & fashion blog</span> <a href="http://silkandsouls.com" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I contributed to building the blog of French journalist and photographer Manon LeMoine. This was my first foray into PHP and WordPress, and I came to love both after  the initial learning curve. I wrote "The Loop" queries that got content of certain categories and types onto the correct pages, as well as deployed the site.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">WordPress, PHP, SASS/SCSS, Compass</span><br>
+                <span class="field">Client:</span> <span class="content">Manon LeMoine</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <script src="js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
-    </div><!-- /carousel -->
-  </div><!-- /headerwrap -->
-</div>
-</body>
-
-
-
-
-
+      ga('create', 'UA-54737851-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
