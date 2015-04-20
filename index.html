@@ -23,24 +23,88 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="container">
+    <div class="intro-wrapper">
     <header id="intro">
         <h2 class="smaller">Hello, World!</h2>
-        <h1>My name is <span class="emphasize"> Tyler Adams </span> and I make stuff on the interwebs</h1>
+        <h1>My name is <span class="emphasize">Tyler A. Adams</span>, and I make stuff on the interwebs</h1>
         <div class="icons-wrapper">
             <a href="http://twitter.com/tyleraadams" target="_blank"><i class="fa fa-twitter social_media"></i></a>
             <a href="http://linkedin.com/in/tyleraadams" target="_blank"><i class="fa fa-linkedin social_media"></i></a>
             <a href="http://github.com/tyleraadams" target="_blank"><i class="fa fa-github-alt social_media"></i></a>
         </div>
     </header>
+    <i class="fa fa-angle-double-down go-down"></i>
+    <div>
+    <section id="portfolio">
+      <ul>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">VeroDalla.com <span class="meta">/ art portfolio app</span><a href="http://verodalla.com" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I built this art portoflio for VeroDalla, renowned French sculptor based in New York. I used the Meteor framework to bootstrap development and to make the site a single-page app. The simple design and lack of page reloads leaves the beauty of the artist's work front and center.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">MeteorJS, MongoDB, Mobile Friendly, Responsive Design, jQuery</span><br>
+                <span class="field">Client:</span> <span class="content">Verodalla</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
 
+              <h1 class="emphasize" itemprop="title">Under Her Skin <span class="meta">/ news diary app</span><a href="http://livingwithbreastcancer.org" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I built the news app for WNYC's The Takeaway's award winning series on minorities living with breast cancer. I use TimelineJS to render the written and audio diaries of the women interviewed for this project.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">TimelineJS Mobile Friendly, Responsive Design, HTML5 audio</span><br>
+                <span class="field">Client:</span> <span class="content">WNYC's The Takeaway</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">ZoePearson.me<span class="meta"> / academic portfolio</span> <a href="http://www.zoepearson.me" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>Geographer Zoe Pearson, PhD wanted to upgrade her old WordPress site for the academic job search. I made a modern and clean UI using her writing and images she took while doing her reserach in Latin America. The user experience is fast, with no page reloads thanks to AJAX POST and GET requests. Elegantly stacking columns of content, the site is completely usable on mobile.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">MeteorJS, Mobile Friendly, Responsive Design</span><br>
+                <span class="field">Client:</span> <span class="content">Zoe Pearson, PhD</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1 class="emphasize" itemprop="title">Silk & Souls<span class="meta"> / news & fashion blog</span> <a href="http://silkandsouls.com" target="_blank"><i class="fa fa-external-link"></i></a><i class="fa fa-angle-right"></i></h1>
+              <div class="teaser hidden" itemprop="teaser">
+              <p>I contributed to building the blog of French journalist and photographer Manon LeMoine. This was my first foray into PHP and WordPress, and I came to love both after  the initial learning curve. I wrote "The Loop" queries that got content of certain categories and types onto the correct pages, as well as deployed the site.</p>
+              <aside>
+                <span class="field">Technologies:</span> <span class="content">WordPress, PHP, SASS/SCSS, Compass</span><br>
+                <span class="field">Client:</span> <span class="content">Manon LeMoine</span>
+              </aside>
+              </div>
+            </header>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <script src="js/main.js"></script>
     <script>
-          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='http://www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','UA-54737851-1','auto');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-54737851-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Tyler Adams -- Developer / Designer -- @tyleraadams
 
 # TECHNOLOGY COLOPHON
 

@@ -95,7 +95,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+ul {
+    list-style-type:none;
+}
 
 
 body {
@@ -112,7 +114,9 @@ h1 { font-size: 1em; }
 a { text-decoration: none }
 
 h2{ margin:0 }
-
+.intro-wrapper {
+    height: 100vh;
+}
 header#intro{
     text-align:center;
     padding:20px 0;
@@ -137,6 +141,15 @@ header#intro h2, header#intro h1 {
     color:#000000;
 }
 
+.go-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 2em;
+}
 
 .social_media{
     font-size:25px;
@@ -178,7 +191,119 @@ header#intro h2.smaller{
 }
 
 
+#portfolio {
+    position:relative;
+    top:100vh;
+}
 
+#portfolio h1 {
+    font-size:2.5em;
+    /*color: rgba(0,0,0,0.5);*/
+    margin-bottom:0;
+    margin-top:0;
+}
+#portfolio h1 i {
+    font-size:0.666em;
+    /*float:right;*/
+    margin-right:20px;
+    color: rgba(0,0,0,0.4);
+}
+
+
+
+#portfolio h1 .meta {
+    font-weight:400;
+    font-size:0.666em;
+    color: rgba(0,0,0,0.4);
+}
+#portfolio h1 i.fa-external-link {
+    font-size:0.5em;
+    margin-top:4px;
+    margin-left: 10px;
+}
+
+#portfolio ul {
+    padding: 0;
+}
+#portfolio li {
+    /*border-top: 1px solid rgba(0,0,0,0.2);*/
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-left:24px;
+    overflow:auto;
+    background: snow;
+    transition: all 0.9s ease;
+    padding-top:24px;
+    padding-bottom:24px;
+}
+
+#portfolio li:hover {
+    background: #ffffff;
+}
+#portfolio li:hover h1 {
+
+}
+#portfolio li:first-child {
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.teaser p {
+    font-size:1.2em;
+    font-weight:400;
+    width:60%;
+    margin-left:0;
+    float:right;
+    margin-top:0;
+    padding-top:12px;
+    padding-right:2%;
+}
+
+.teaser aside {
+    float:left;
+    width:30%;
+    border-right: 2px solid #CAE7FF;
+    font-size:0.9em;
+    font-family: "Raleway", sans-serif;
+    font-weight:400;
+    padding-right:2%;
+    padding-bottom:33px;
+    padding-top:12px;
+}
+#portfolio h1 i:hover {
+    color:  #CAE7FF;
+}
+
+li:nth-of-type(2) aside {
+    border-right: 2px solid #FF5C5C;
+}
+#portfolio li:nth-of-type(2) h1 i:hover {
+    color:  #FF5C5C;
+}
+li:nth-of-type(3) aside {
+    border-right: 2px solid #5CCC6B;
+    padding-bottom: 70px;
+}
+
+#portfolio li:nth-of-type(3) h1 i:hover {
+    color:  #5CCC6B;
+}
+li:nth-of-type(4) aside {
+    border-right: 2px solid #F0EEA6;
+    padding-bottom: 70px;
+}
+#portfolio li:nth-of-type(4) h1 i:hover {
+    color:  #F0EEA6;
+}
+.teaser aside .content {
+    /*float:right;*/
+}
+.teaser aside .field {
+    font-weight:700;
+}
+footer {
+    position:relative;
+    bottom:0;
+}
+/*.teaser aside span { border-bottom: 1px solid #F0EEA6;; }*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
