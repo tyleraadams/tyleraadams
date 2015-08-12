@@ -107,6 +107,7 @@ body {
     width:100%;
     margin:0;
     padding:0;
+    font-size:62.5%;
 }
 
 h1 { font-size: 1em; }
@@ -121,7 +122,7 @@ header#intro{
     text-align:center;
     padding:20px 0;
     font-weight:100 !important;
-    font-size:2.75em;
+    font-size: 4em;
     position:absolute;
     top:50%;
     left:50%;
@@ -149,6 +150,16 @@ header#intro h2, header#intro h1 {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     font-size: 2em;
+}
+
+.go-down:hover {
+    -webkit-transform: scale(2,2) translateX(-50%);
+    -ms-transform: scale(2,2) translateX(-50%);
+    transform: scale(2,2) translateX(-50%);
+    -webkit-transition: 100ms;
+    -ms-transition: 100ms;
+    transition: 100ms;
+    cursor: pointer;
 }
 
 .social_media{
@@ -194,6 +205,7 @@ header#intro h2.smaller{
 #portfolio {
     position:relative;
     top:100vh;
+    font-size: 1.5em;
 }
 
 #portfolio h1 {
@@ -205,15 +217,14 @@ header#intro h2.smaller{
 #portfolio h1 i {
     font-size:0.666em;
     /*float:right;*/
-    margin-right:20px;
+    margin-right:0.8em;
     color: rgba(0,0,0,0.4);
 }
 
 
-
 #portfolio h1 .meta {
     font-weight:400;
-    font-size:0.666em;
+    font-size:0.5em;
     color: rgba(0,0,0,0.4);
 }
 #portfolio h1 i.fa-external-link {
@@ -261,21 +272,21 @@ header#intro h2.smaller{
     float:left;
     width:30%;
     border-right: 2px solid #CAE7FF;
-    font-size:0.9em;
+    /*font-size:0.9em;*/
     font-family: "Raleway", sans-serif;
     font-weight:400;
     padding-right:2%;
     padding-bottom:33px;
     padding-top:12px;
 }
-#portfolio h1 i:hover {
+#portfolio h1 i:hover, #portfolio h1 .fa-angle-down  {
     color:  #CAE7FF;
 }
 
 li:nth-of-type(2) aside {
     border-right: 2px solid #FF5C5C;
 }
-#portfolio li:nth-of-type(2) h1 i:hover {
+#portfolio li:nth-of-type(2) h1 i:hover, #portfolio li:nth-of-type(2) h1 .fa-angle-down {
     color:  #FF5C5C;
 }
 li:nth-of-type(3) aside {
@@ -283,14 +294,14 @@ li:nth-of-type(3) aside {
     padding-bottom: 70px;
 }
 
-#portfolio li:nth-of-type(3) h1 i:hover {
+#portfolio li:nth-of-type(3) h1 i:hover, #portfolio li:nth-of-type(3) h1 .fa-angle-down {
     color:  #5CCC6B;
 }
 li:nth-of-type(4) aside {
     border-right: 2px solid #F0EEA6;
     padding-bottom: 70px;
 }
-#portfolio li:nth-of-type(4) h1 i:hover {
+#portfolio li:nth-of-type(4) h1 i:hover, #portfolio li:nth-of-type(4) h1 .fa-angle-down {
     color:  #F0EEA6;
 }
 .teaser aside .content {
@@ -302,6 +313,118 @@ li:nth-of-type(4) aside {
 footer {
     position:relative;
     bottom:0;
+}
+
+ .fa-angle-right:hover, .fa-angle-down {
+    -webkit-transform: scale(2,2);
+    -ms-transform: scale(2,2);
+    transform: scale(2,2);
+    -webkit-transition: 100ms;
+    -ms-transition: 100ms;
+    transition: 100ms;
+}
+
+@media only screen and (max-width: 1064px) {
+
+   body { font-size: 60% !important; }
+
+}
+@media only screen and (max-width: 800px) {
+
+   body { font-size: 58% !important; }
+
+}
+@media only screen and (max-width: 634px) {
+
+   body { font-size: 55% !important; }
+   header#intro { width: 90%;}
+
+}
+
+@media only screen and (max-width: 550px) {
+
+   #portfolio h1 {
+    font-size:1.9em;
+    }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+    body { font-size:60% !important; }
+
+    .intro-wrapper {
+        height: 300px;
+    }
+
+    header#intro {
+        padding:24px 24px;
+        font-size:2.85em;
+        position:static;
+        width:80%;
+        -webkit-transform:translate(0%);
+        -ms-transform:translate(0%);
+        transform:translate(0%);
+    }
+
+    #portfolio {
+        top:100px;
+
+    }
+
+    #portfolio h1 {
+        font-size: 1.333em;
+    }
+
+    #portfolio h1 .meta {
+        font-size:.9em;
+    }
+
+
+    #portfolio li {
+        padding-right: 24px
+    }
+
+    .teaser aside, .teaser p {
+        float: none;
+        width:100%;
+    }
+
+    .teaser p {
+        font-size: 1.2em;
+    }
+
+    #portfolio h1 i.fa-angle-right, #portfolio h1 i.fa-angle-down,  #portfolio h1 i.fa-external-link  {
+        display: block;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 5px;
+        margin-top:5px;
+        font-size:1em;
+        padding: 8px;
+        margin-left:0;
+        width:80%;
+    }
+
+    #portfolio h1 i.fa-angle-right, #portfolio h1 i.fa-angle-down{
+        font-size:1.2em;
+        padding-top:6px;
+        padding-bottom:6px;
+    }
+
+     #portfolio h1 i.fa-angle-right:after,  #portfolio h1 i.fa-external-link:after {
+        content: attr(data-action);
+        font-size:0.75em;
+        font-family: 'Raleway', sans-serif;
+        margin-left:24px;
+     }
+
+     #portfolio h1 i.fa-angle-right:after {
+        font-size:0.59em;
+        margin-left:35px;
+        bottom: 1px;
+        position: relative;
+     }
+
+
 }
 /*.teaser aside span { border-bottom: 1px solid #F0EEA6;; }*/
 /* ==========================================================================
