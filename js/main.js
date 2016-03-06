@@ -1,51 +1,50 @@
-var objectSelector = function (selector) {
-    return {
-        selectDomFromSelector: function selectDomFromSelector() {
-            return document.querySelector(selector);
-        }
-    };
-};
-
 var Scroller = function (arrowQuery, toWhere) {
-  var arrow = objectSelector(arrowQuery).selectDomFromSelector();
-  var toWhereDom = objectSelector(toWhere).selectDomFromSelector()
-  function init () {
-    arrow.addEventListener('click', scroll.call(this, toWhereDom));
-
-  };
-  function scroll (toWhere) {
-    return function (e) {
-
-        scrollTo(portfolio.offsetTop, 500, easing.linear);
+    'use strict';
+    debugger
+    var arrow = document.querySelector(arrowQuery);
+    // var toWhereDom = document.querySelector(toWhere);
+    function init () {
+        arrow.addEventListener('click', scroll.call(this, toWhere));
     }
-  };
-
-  return  { init: init };
-
+    function scroll (toWhere) {
+        var coordinates =  toWhere.getBoundingClientRect().top;
+        var distanceFromTop = document.body.scrollTop;
+        var yDistance = coordinates + distanceFromTop;
+        return function () {
+            scrollTo(yDistance, 500, easing.linear);
+        };
+    }
+    return  {
+        init: init,
+        scroll: scroll
+    };
 };
 
 var Portfolio = function (portfolioSelector) {
-
-    var dom = objectSelector(portfolioSelector).selectDomFromSelector();
+    'use strict';
+    var dom = document.querySelector(portfolioSelector);
     var myEntries = [];
     var isOpen;
-
     function init () {
         buildPortfolioEntryList(dom);
         dom.addEventListener('click', handleClick);
-    };
+        return dom;
+    }
     function buildPortfolioEntryList (portfolioDom) {
         var portfolioItems = portfolioDom.querySelectorAll('li');
-        for (var i=0; i < portfolioItems.length; i++) {
-            var portfolioItemDom = portfolioItems[i];
-            var portfolioEntry = PortfolioEntry(portfolioItemDom, i);
-            myEntries.push(portfolioEntry)
+        var i = 0;
+        var portfolioItemDom;
+        var portfolioEntry;
+        for (i; i < portfolioItems.length; i++) {
+            portfolioItemDom = portfolioItems[i];
+            portfolioEntry = PortfolioEntry(portfolioItemDom, i);
+            myEntries.push(portfolioEntry);
             portfolioEntry.init();
         }
-    };
+    }
     function handleClick (e) {
         var index = 0;
-        clickEntryIndex = getClosest(e.target, 'li').dataset.index;
+        var clickEntryIndex = getClosest(e.target, 'li').dataset.index;
         var clickedEntry = myEntries[clickEntryIndex];
         if (clickedEntry.amIOpen()) {
             return clickedEntry.close();
@@ -57,20 +56,22 @@ var Portfolio = function (portfolioSelector) {
             }
         }
         if (!clickedEntry.amIOpen()) {
-            clickedEntry.open()
+            clickedEntry.open();
         }
-    };
+    }
     return {
         init: init
     };
 };
 
 var PortfolioEntry = function (portfolioItemDom, i) {
+    'use strict';
     var myDom = portfolioItemDom;
     var teaser = myDom.querySelector('.teaser');
     var arrow = myDom.querySelector('.fa-angle-right');
     var myIndex = i;
     var isOpen = false;
+    var scroller = Scroller(null, myDom);
     function init () {
         myDom.dataset.index = myIndex;
     }
@@ -79,15 +80,14 @@ var PortfolioEntry = function (portfolioItemDom, i) {
     }
     function close () {
         myDom.classList.remove('open');
-        teaser.classList.add('hidden');
         arrow.classList.remove('fa-angle-down');
         isOpen = false;
     }
     function open () {
         myDom.classList.add('open');
-        teaser.classList.remove('hidden');
         arrow.classList.add('fa-angle-down');
         isOpen = true;
+        scroller.scroll(myDom)(null);
     }
     function getDom (){
         return myDom;
@@ -98,7 +98,7 @@ var PortfolioEntry = function (portfolioItemDom, i) {
         close: close,
         getDom: getDom,
         amIOpen: amIOpen
-    }
+    };
 };
 
 
@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var arrowQuery = '.go-down';
   var portfolioQuery = '#portfolio';
   var portfolio = Portfolio(portfolioQuery);
-  var scroller = Scroller(arrowQuery, portfolioQuery);
+  var scroller = Scroller(arrowQuery, portfolio.init());
 
-  portfolio.init();
+  // portfolio.init();
   scroller.init();
 });
 // Helper functions
@@ -159,29 +159,29 @@ var easing = {
   // no easing, no acceleration
   linear: function (t) { return t },
   // accelerating from zero velocity
-  easeInQuad: function (t) { return t*t },
+  easeInQuad: function (t) { return t * t },
   // decelerating to zero velocity
-  easeOutQuad: function (t) { return t*(2-t) },
+  easeOutQuad: function (t) { return t * (2 - t) },
   // acceleration until halfway, then deceleration
-  easeInOutQuad: function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t },
+  easeInOutQuad: function (t) { return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t },
   // accelerating from zero velocity
-  easeInCubic: function (t) { return t*t*t },
+  easeInCubic: function (t) { return t * t * t },
   // decelerating to zero velocity
-  easeOutCubic: function (t) { return (--t)*t*t+1 },
+  easeOutCubic: function (t) { return (--t) * t * t + 1 },
   // acceleration until halfway, then deceleration
-  easeInOutCubic: function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 },
+  easeInOutCubic: function (t) { return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 },
   // accelerating from zero velocity
-  easeInQuart: function (t) { return t*t*t*t },
+  easeInQuart: function (t) { return t * t * t * t },
   // decelerating to zero velocity
-  easeOutQuart: function (t) { return 1-(--t)*t*t*t },
+  easeOutQuart: function (t) { return 1 - (--t) * t * t * t },
   // acceleration until halfway, then deceleration
-  easeInOutQuart: function (t) { return t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t },
+  easeInOutQuart: function (t) { return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t },
   // accelerating from zero velocity
-  easeInQuint: function (t) { return t*t*t*t*t },
+  easeInQuint: function (t) { return t * t * t * t * t },
   // decelerating to zero velocity
-  easeOutQuint: function (t) { return 1+(--t)*t*t*t*t },
+  easeOutQuint: function (t) { return 1 + (--t) * t * t * t * t },
   // acceleration until halfway, then deceleration
-  easeInOutQuint: function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
+  easeInOutQuint: function (t) { return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t }
 }
 
 

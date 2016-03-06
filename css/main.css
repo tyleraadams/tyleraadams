@@ -242,13 +242,29 @@ header#intro h2.smaller{
     padding-left:24px;
     overflow:auto;
     background: snow;
-    transition: all 0.9s ease;
+
     padding-top:24px;
     padding-bottom:24px;
-}
 
+}
+.teaser {
+    transition: max-height 0.15s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+/*.teaser.hidden {
+    max-height: 0;
+    transition: max-height 1s linear;
+}*/
+
+.open .teaser {
+
+    max-height: 250px;
+    transition: max-height 0.33s ease-in;
+}
 #portfolio li:hover {
     background: #ffffff;
+    max-height: 245px;
 }
 #portfolio li:hover h1 {
 
