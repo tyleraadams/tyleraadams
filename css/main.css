@@ -237,15 +237,13 @@ header#intro h2.smaller{
     padding: 0;
 }
 #portfolio li {
-    /*border-top: 1px solid rgba(0,0,0,0.2);*/
     border-bottom: 1px solid rgba(0,0,0,0.2);
     padding-left:24px;
     overflow:auto;
     background: snow;
-
     padding-top:24px;
     padding-bottom:24px;
-
+    cursor: pointer;
 }
 .teaser {
     transition: max-height 0.15s ease-out;
@@ -256,10 +254,11 @@ header#intro h2.smaller{
     max-height: 0;
     transition: max-height 1s linear;
 }*/
-
+#portfolio li.open {
+    cursor: initial;
+}
 .open .teaser {
-
-    max-height: 250px;
+    max-height: 500px;
     transition: max-height 0.33s ease-in;
 }
 #portfolio li:hover {
@@ -354,7 +353,12 @@ footer {
 
    body { font-size: 55% !important; }
    header#intro { width: 90%;}
+   .fa-angle-right:hover, .fa-angle-down, .go-down:hover {
+    -webkit-transform:  translateX(0);
+    -ms-transform:  translateX(0);
+    transform:  translateX(0);
 
+   }
 }
 
 @media only screen and (max-width: 550px) {
@@ -383,7 +387,7 @@ footer {
     }
 
     #portfolio {
-        top:100px;
+        top:0;
 
     }
 

@@ -1,8 +1,6 @@
 var Scroller = function (arrowQuery, toWhere) {
     'use strict';
-    debugger
     var arrow = document.querySelector(arrowQuery);
-    // var toWhereDom = document.querySelector(toWhere);
     function init () {
         arrow.addEventListener('click', scroll.call(this, toWhere));
     }
@@ -11,7 +9,7 @@ var Scroller = function (arrowQuery, toWhere) {
         var distanceFromTop = document.body.scrollTop;
         var yDistance = coordinates + distanceFromTop;
         return function () {
-            scrollTo(yDistance, 500, easing.linear);
+            scrollTo(yDistance, 500, easing.easeOutQuad);
         };
     }
     return  {
@@ -108,15 +106,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var portfolioQuery = '#portfolio';
   var portfolio = Portfolio(portfolioQuery);
   var scroller = Scroller(arrowQuery, portfolio.init());
-
-  // portfolio.init();
   scroller.init();
 });
-// Helper functions
 
-function hasClass(el, cls) {
-  return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
-}
+
+// Helper functions
 
 function scrollTo(Y, duration, easingFunction, callback) {
 
