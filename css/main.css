@@ -95,33 +95,48 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-ul {
-    list-style-type:none;
-}
-
+ul { list-style-type:none; }
+a { text-decoration: none; }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight:100;
-    color:rgba(0,0,0,0.44) !important;
+    color:rgba(0,0,0,0.44);
     width:100%;
     margin:0;
     padding:0;
     font-size:62.5%;
 }
 
-h1 { font-size: 1em; }
+.intro__main-heading {
+    font-size: 1em;
+    font-weight:100 ;
+}
 
-a { text-decoration: none }
+.--emphasize {
+    font-family: 'Raleway', sans-serif;
+    font-weight:700;
+    color:#000000;
+}
 
-h2{ margin:0 }
+.intro__sub-heading {
+    margin:0;
+    color: #F0EEA6;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+
+
 .intro-wrapper {
     height: 100vh;
 }
-header#intro{
+
+
+.intro {
     text-align:center;
     padding:20px 0;
-    font-weight:100 !important;
+    font-weight:100;
     font-size: 4em;
     position:absolute;
     top:50%;
@@ -129,18 +144,9 @@ header#intro{
     -webkit-transform:translate(-50%,-50%);
     -ms-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
-
 }
 
-header#intro h2, header#intro h1 {
-    font-weight:100 !important;
-}
 
-.emphasize{
-    font-family: 'Raleway', sans-serif !important;
-    font-weight:700 !important;
-    color:#000000;
-}
 
 .go-down {
     position: absolute;
@@ -162,7 +168,8 @@ header#intro h2, header#intro h1 {
     cursor: pointer;
 }
 
-.social_media{
+
+.intro__icons-wrapper__social-icon {
     font-size:25px;
     color:rgba(0,0,0,0.2);
     -webkit-flex: auto;
@@ -170,19 +177,19 @@ header#intro h2, header#intro h1 {
     flex: auto;
 }
 
-
-
-a:hover:first-of-type .social_media{
+.intro__icons-wrapper__social-icon--twitter:hover {
     color:#CAE7FF;
 }
-a:hover:nth-of-type(2) .social_media{
+
+.intro__icons-wrapper__social-icon--linkedin:hover {
     color:#FF5C5C;
 }
-a:hover:last-of-type  .social_media {
+
+.intro__icons-wrapper__social-icon--github:hover {
     color:#5CCC6B;
 }
 
-.icons-wrapper {
+.intro__icons-wrapper {
     width: 150px;
     margin: 0 auto;
     display: -webkit-flex;
@@ -196,24 +203,20 @@ a:hover:last-of-type  .social_media {
     justify-content: space-between;
 }
 
-header#intro h2.smaller{
-    color: #F0EEA6;
-    font-family: 'Raleway', sans-serif !important;
-}
 
 
-#portfolio {
+.portfolio {
     position:relative;
     top:100vh;
     font-size: 1.5em;
 }
-
-#portfolio h1 {
+.portfolio__heading-main {
     font-size:2.5em;
     /*color: rgba(0,0,0,0.5);*/
     margin-bottom:0;
     margin-top:0;
 }
+
 #portfolio h1 i {
     font-size:0.666em;
     /*float:right;*/
@@ -222,7 +225,7 @@ header#intro h2.smaller{
 }
 
 
-#portfolio h1 .meta {
+.portfolio__heading-main--meta {
     font-weight:400;
     font-size:0.5em;
     color: rgba(0,0,0,0.4);
